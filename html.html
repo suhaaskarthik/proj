@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<style type="text/css">
+	.example2{
+		background-image: url('lake.jpg');
+		text-align:center;
+	}
+	.example{
+		background-image: url('lake.jpg');
+		height:900px;
+	}
+	#filter{
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+		display: none;
+		text-align: center;
+	}
+	#map{
+		display: block;
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+		text-align: center;
+	}
+	#animation{
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+		display: none;
+		text-align: center;
+	}
+	#div3{
+		background-color: white;
+	}
+	#about-us{
+		background-color: #b3b3b3;
+		text-align: left;
+	}
+	.navbar{
+		display: flex;
+		padding: 3px;
+		width:1500px;
+		height:70px;
+	}
+	.navbar-values-sign{
+		color: white;
+		font-family: sans-serif;
+		text-decoration: none;
+		padding: 25px;
+		position: absolute;
+		right: 30px;
+		color:white;
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+		font-size:20px;
+	}
+	.navbar-values-sign:hover{
+		color:blue;
+
+	}
+	.navbar-values-log{
+		color: white;
+		font-family: sans-serif;
+		text-decoration: none;
+		padding: 25px;
+		position: absolute;
+		right: 170px;
+		color:white;
+		font-size:20px;
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+	}
+	.navbar-values-log:hover{
+		color:blue;
+
+	}
+	.navbar-values-tut{
+		color: white;
+		font-family: sans-serif;
+		text-decoration: none;
+		padding: 25px;
+		position: absolute;
+		right: 300px;
+		color:white;
+		font-size:20px;
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+	}
+	.navbar-values-tut:hover{
+		color:blue;
+
+	}
+	.navbar-values-sign2{
+		color: white;
+		font-family: sans-serif;
+		text-decoration: none;
+		padding: 25px;
+		position: absolute;
+		left: 150px;
+		color:white;
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+		font-size:20px;
+	}
+	.navbar-values-sign2:hover{
+		color:blue;
+
+	}
+	.navbar-values-log2{
+		color: white;
+		font-family: sans-serif;
+		text-decoration: none;
+		padding: 25px;
+		position: absolute;
+		left: 270px;
+		color:white;
+		font-size:20px;
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+	}
+	.navbar-values-log2:hover{
+		color:blue;
+
+	}
+	.navbar-values-tut2{		
+		color: white;
+		text-decoration: none;
+		font-size:20px;
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+	}
+	.navbar-values-tut2:hover{
+		color:blue;
+
+	}
+	.navbar-values-logo{
+		color: #00cc44;
+		font-family: sans-serif;
+		text-decoration: none;
+		font-size: 50px;
+		position:absolute;
+		left:10px;
+
+		
+	}
+	
+	.steps{
+		background-color: white;
+	}
+	.steps-values{
+		color:#003d66;
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+	}
+	.step0{
+		position:absolute;
+		left:400px;
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+		
+	}
+	.step1{
+		animation-name: anim;
+		animation-duration: 3s;
+		animation-fill-mode: forwards;
+		position: relative;
+		text-align: center;
+		width:500px;
+	}
+	.step2{
+		animation-name: anim;
+		animation-duration: 6s;
+		animation-fill-mode: forwards;
+		position: relative;
+		text-align: center;
+		width:500px;
+
+	}
+	.step3{
+		animation-name: anim;
+		animation-duration: 9s;
+		animation-fill-mode: forwards;
+		position: relative;
+		text-align: center;
+		width:500px;
+	}
+	.step4{
+		animation-name: anim;
+		animation-duration: 12s;
+		animation-fill-mode: forwards;
+		position: relative;
+		text-align: center;
+		width:500px;
+	}
+	.step5{
+		animation-name: anim;
+		animation-duration: 15s;
+		animation-fill-mode: forwards;
+		position: relative;
+		text-align: center;
+		width:500px;
+	}
+	.create{
+		height: 100px;
+  		width: 200px;
+  		
+	}
+	.button-div{
+		height: 100px;
+  		width: 300px;
+  		background-color:black;
+	}
+	.button-div:hover{
+		animation-name: button-anim-fadein;
+		animation-duration: 3s;
+		animation-fill-mode: forwards;
+		position: relative;
+		color:red;
+	}
+	
+	.create{
+		border-radius: 20px 20px 20px 20px;
+		height: 70px;
+		background-color: #1a8cff;
+		border-color:#1a8cff;
+		font-size: 20px;
+		color:lightblue;
+		border: none;
+		cursor: pointer;
+		box-shadow: 0px 10px 5px rgba(0,0,0,0.1);
+	}
+	.create:hover{
+		color: white;
+	}
+	#button1{
+		width:40px;
+		height: 10px;
+		border:none;
+		background-color: green;
+	}
+	#button2{
+		width:40px;
+		height: 10px;
+		border:none;
+		background-color: grey;
+
+	}
+	#button3{
+		width:40px;
+		height: 10px;
+		border:none;
+		background-color: grey;
+	}
+	#button1:hover{
+		cursor:pointer;
+
+	}
+	#button2:hover{
+		cursor:pointer;
+
+	}
+	#button3:hover{
+		cursor:pointer;
+
+	}
+	*{
+		outline: none;
+	}
+	@keyframes anim{
+		from {left: 500px;}
+  		to {left: 500px;}
+	}
+	@keyframes button-anim-fadein{
+		from{			
+		  width:0px;
+		}
+		to{
+		  width:200px; 	
+		}
+	}
+	@keyframes button-anim-fadeout{
+		from{
+			
+		  background: #73AD21;
+		  padding: 20px; 
+		  width: 200px; 
+		}
+		to{
+		  background: #73AD21;
+		  padding: 20px; 
+		  width: 100px; 	
+		}
+	}
+</style>
+<script type="text/javascript">
+	
+	function showMap(){
+		var maps= document.getElementById('map');
+		var filters= document.getElementById('filter');
+		var animation= document.getElementById('animation');
+		var button= document.getElementById('button1');
+		var button2= document.getElementById('button2');
+		var button3= document.getElementById('button3');
+		animation.style.display	='none';
+		filters.style.display	='none';
+		maps.style.display	='block';
+		button.style.backgroundColor='green';
+		button2.style.backgroundColor='grey';
+		button3.style.backgroundColor='grey';
+	}
+	function showAnim(){
+		var maps= document.getElementById('map');
+		var filters= document.getElementById('filter');
+		var animation= document.getElementById('animation');
+		var button= document.getElementById('button2');
+		var button2= document.getElementById('button1');
+		var button3= document.getElementById('button3');
+		animation.style.display	='block';
+		filters.style.display	='none';
+		maps.style.display	='none';
+		button.style.backgroundColor='green';
+		button2.style.backgroundColor='grey';
+		button3.style.backgroundColor='grey';
+	}
+	function showFilters(){
+		var maps= document.getElementById('map');
+		var filters= document.getElementById('filter');
+		var animation= document.getElementById('animation');
+		var button= document.getElementById('button3');
+		var button1= document.getElementById('button1');
+		var button2= document.getElementById('button2');
+		animation.style.display	='none';
+		filters.style.display	='block';
+		maps.style.display	='none';
+		button.style.backgroundColor='green';
+		button1.style.backgroundColor='grey';
+		button2.style.backgroundColor='grey';
+	}
+		
+</script>
+
+	</div>
+	</style>
+	<link rel="icon" href="logo.png">
+	<script src="https://kit.fontawesome.com/fb4d5a481b.js" crossorigin="anonymous"></script>
+	<body>
+		
+		<div class='example2'>
+			<a href="create-chart"class="navbar-values-logo"><img src='logo.png' width=100px></i></a>
+	    	<a href="tutorials.html"class="navbar-values-sign"><strong>Get help!<strong></a>
+			<br>
+		<br>
+			<button onclick="showMap()" id='button1'>      </button>
+			<button onclick="showAnim()" id='button2'>    </button>
+			<button onclick="showFilters()" id='button3'>    </button>
+		</div>
+		<div id="map" style="color: #000080;" class='example'>
+			<br>
+			<br>
+			
+			<h1 style='color: black;font-size:45px;'>Make <span style = 'color: blue;'>stunning</span> and <span style = 'color: blue;'>interactive</span> visuals to your data</h1>
+			<h2>Charts are the best to visualise and understand your data so try it out</h2>
+			<center><button class="create" onclick="window.location.href='website.html'"><strong>Create</strong> chart <i class="fas fa-chart-pie"></i></button></center>
+			<br>
+			<img src='map.gif' width=800px>
+		</div>
+		<div id="animation" style="color: darkblue;" class='example'>
+			<br>
+			<br>
+			<h1 style='color: black;font-size:45px;'>Add <span style = 'color: blue;'>amazing</span> animations to your graphs</h1>
+			<h2>Animate your graphs and analyse how your data has changed throughout time</h2>
+			<h2>You can learn the transition of your graph from time to time with our animation feature</h2>
+			<center><button class="create"><strong>Create</strong> chart <i class="fas fa-chart-pie"></i></button></center>
+			<br>
+			<img src='animation.gif' width=800px>
+		</div>
+		<div id="filter" style="color: darkblue;" class='example'>
+			<br>
+			<br>
+			<h1 style='color: black;font-size:45px;'><span style = 'color: blue;'>Filter</span> your data</h1>
+			<h2>Your data has probably got some unwanted stuff, you can remove it with our data filter</h2>
+			<h2>Data is always messy, but don't fret we've got an awesome feature to remove that mess</h2>
+			
+			<center><button class="create"><strong>Create</strong> chart <i class="fas fa-chart-pie"></i></button></center>
+			<br>
+			<img src='filter.gif' width=85% height=50%>
+		</div>
+		
+		<div class='steps'>
+			<nav class="navbar">
+		<br>
+		<br>
+		
+			<br>
+			<div class="step0">		
+				<h1 style='font-size: 50px;color: black;'>create <span style='color: darkblue'>epic</span> graphs in 5 simple steps</h1>
+			<div>
+			<img src='banner.png' style ='position:absolute;left:0px;' width=45%>
+			<div class="step1">
+
+				<h2 class="steps-values" style="color: blue">   Step 1<i class="fas fa-file-import"></i></h2>
+				<h2 class="steps-values">Import the data</h2>
+				<i class="fas fa-arrow-down"></i>
+			</div>
+			<div class="step2">
+				<h2 class="steps-values"style="color: blue">   Step 2<i class="fas fa-filter"></i></h2>
+				<h2 class="steps-values">Filter the data</h2>
+				<i class="fas fa-arrow-down"></i>
+			</div>
+			<div class="step3">
+				<h2 class="steps-values" style="color: blue">    Step 3<i class="fas fa-chart-bar"></i></h2>
+				<h2 class="steps-values">Choose the axes and graph of your choice</h2>
+				<i class="fas fa-arrow-down"></i>
+			</div>
+			<div class="step4">
+				<h2 class="steps-values" style="color: blue">   Step 4<i class="fas fa-paint-brush"></i></h2>
+				<h2 class="steps-values">Add some finesse,colour and animation</h2>
+				<i class="fas fa-arrow-down"></i>
+			</div>
+			<div class="step5">
+				<h2 class="steps-values" style="color: blue">   Step 5<i class="fas fa-hands-wash"></i></h2>
+				<h2 class="steps-values">Voila you are done! Now you can export or embed it in your site</h2>
+			</div>
+			<br>
+		</div>
+		
+		
+		
+		<div id="div3" style='color: darkblue;text-align:center;' >
+			<br>
+			<br>
+			<strong><h1 style='color: black;font-size: 50px;'>Why choose <span style = 'color: blue;'>datum</span></h1></strong>
+			<h2>Charts help you analyse your data, because it is impossible to undertand</h2>
+			<h2>your data through tables and statistics. Charts need to look aesthetically pleasing</h2>
+			<h2>to attract your viewers, you can implement tons of features in your graph</h2>
+			<h2>like animations, trend lines and you can design epic heat maps</h2>
+			<img src='bar graph.gif' width=1000px>
+		</div>
+		<div id="div3" style='color: darkblue;text-align:center;'>
+			<br>
+			<br>
+			<strong><h1 style='color: rgb(27, 24, 24);font-size: 30px;'><span style = 'color: blue;'>Export</span> your chart</h1></strong>
+			<h2>Bring your visualisations to life: your chart can be embedded in a website</h2>
+			<h2> OR if you'd like, you can export in static form, either as jpg, png or svg</h2>
+			<i class="fas fa-chart-bar" style="font-size:64px;color:green;position:absolute;left:600px;"></i>
+			<i class="fas fa-long-arrow-alt-right" style="font-size:64px;color:black;position:absolute;left:700px;"></i>
+			<i class="fas fa-file-image" style="font-size:64px;color:red;position:absolute;left:900px;"></i>
+			<i class="fab fa-html5" style="font-size:64px;color:red;position:absolute;left:800px;"></i>
+			<br>
+			<br>
+			<br>
+		</div>
+		<div id="div3" style='color: darkblue;text-align:center;'>
+			<br>
+			<br>
+			<strong><h1 style='color: black;font-size: 30px;'>Make the <span style = 'color: blue;'>best</span> of the <span style = 'color: blue;'>best</span></h1></strong>
+			<h2>Design the most coolest graphs in world, we have a variety features you can implement</h2>
+			<h2>to attract all your VIEWERS, with datum design a viz you would not regret</h2>
+			
+			<br>
+			<br>
+			<br>
+		</div>
+		<div id="about-us" style='height: 150px;border-left: 10px solid #b3b3b3;text-align: center;'>
+			<br>
+			<p>Charts produced by datum is all open source and free to use you can use them for any purpose</p>
+			<p>Please recommend datum to others if you'd enjoyed the final product</p>
+			<a href="tutorials.html"class="navbar-values-tut2"><strong>Stuck? check out Tutorials<strong></a>
+		    
+		</div>
+		
+	</body>
+	
+</html>
